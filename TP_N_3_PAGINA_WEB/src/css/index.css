@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f8cce5;
+  color: #000;
+}
+
+header {
+  background-color: #f48fc0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.titulo-principal {
+  background-color: #ff9edb;
+  color: black;
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 30px auto;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.estadisticas {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.estadisticas img {
+  width: 90%;
+  max-width: 900px;
+  border-radius: 5px;
+}
+
+.cris-morena {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.cris-morena h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cris-morena p {
+  font-size: 14px;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.imagenes-cris {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.imagenes-cris img {
+  width: 180px;
+  border-radius: 5px;
+}
+
+.margarita {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+
+.margarita h2 {
+  font-size: 22px;
+}
+
+.contenedor-margarita {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contenedor-margarita img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.novelas p {
+  font-size: 14px;
+}
+
+.titulo-exitos {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.shows {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer {
+  text-align: left;
+  font-size: 10px;
+  padding: 10px;
+  color: #000;
+  background-color: #f8cce5;
+}

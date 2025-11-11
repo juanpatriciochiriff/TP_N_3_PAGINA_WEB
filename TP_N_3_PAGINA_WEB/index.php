@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La resistencia</title>
+  <link rel="stylesheet" href="src/css/index.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
+        <li><a href="#">Productos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="titulo-principal-div">
+    <h1 class="titulo-principal">La resistencia</h1>
+  </div>
+  <section class="estadisticas">
+    
+  </section>
+
+  <section class="cris-morena">
+    <h2>Cris morena</h2>
+    <p>
+      Cris Morena es una destacada productora, creadora, guionista, compositora, actriz y 
+      exconductora de televisión argentina. Es una figura icónica de la televisión juvenil e infantil 
+      en Argentina y otros países de Latinoamérica.<br><br>
+      Ella fundó la compañía <b>CRIS MORENA GROUP</b> que en conjunto con 
+      <b>RGB ENTERTAINMENT</b> hicieron todas las series producidas.
+    </p>
+    <div class="imagenes-cris">
+      <img src="src/img/crismorena.png" alt="Cris Morena">
+      <img src="src/img/crismorenagrupo.png" alt="Cris Morena Group">
+    </div>
+  </section>
+
+  <section class="margarita">
+    <div class="contenedor-margarita">
+        <h2>MARGARITA</h2>
+        <p>
+        Actualmente se está grabando y produciendo “Margarita”, la secuela de Floricienta.
+        </p>
+      <img src="src/img/margarita.png" alt="Margarita show">
+      <div class="novelas">
+        <p>
+          Cris Morena es la creadora de famosas novelas, las cuales son:
+        </p>
+        <img src="src/img/grandesexitos.png" alt="Grandes éxitos de Cris Morena">
+        <p class="titulo-exitos">GRANDES ÉXITOS</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shows">
+    <h2>Próximos shows</h2>
+    <p>
+      Todos estos son en el <b>MOVISTAR ARENA</b><br>
+      Humboldt 450<br><br>
+      Fechas disponibles para el:<br>
+      01/11/25 - 19:30hs<br>
+      02/11/25 - 18:30hs<br>
+      08/11/25 - 19:30hs<br>
+      09/11/25 - 18:30hs
+    </p>
+  </section>
+
+  <footer>
+    <p>Copyright © Ludmila Monges 2025 :3</p>
+  </footer>
+</body>
+</html>
