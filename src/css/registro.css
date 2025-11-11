@@ -1,0 +1,90 @@
+/* --- COLORES BASE --- */
+:root {
+    --rosa-claro: #f7cbe7;
+    --rosa-fuerte: #e57ab2;
+    --rosa-boton: #f28ccd;
+    --negro: #000;
+    --blanco: #fff;
+    --borde: #d48ebb;
+}
+
+/* --- ESTILOS GENERALES --- */
+body {
+    background-color: var(--rosa-claro);
+    font-family: "Courier New", monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CONTENEDOR */
+.container {
+    background-color: var(--blanco);
+    padding: 35px 40px;
+    border-radius: 12px;
+    border: 2px solid var(--borde);
+    width: 380px;
+}
+
+/* FORMULARIO */
+.formulario h2 {
+    text-align: center;
+    color: var(--negro);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid var(--borde);
+}
+
+/* BOTÓN */
+#boton {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--rosa-boton);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--negro);
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+#boton:hover {
+    background-color: var(--rosa-fuerte);
+}
+
+/* LINKS */
+p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: var(--rosa-fuerte);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}

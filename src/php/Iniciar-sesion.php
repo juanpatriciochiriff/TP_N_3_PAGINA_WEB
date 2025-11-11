@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = $result->fetch_assoc();
             if (password_verify($contrasena, $user['contrasena_usuario'])) {
                 session_regenerate_id(true);
-                $_SESSION['usuario_id'] = $user['id_usuario'];
+                $_SESSION['id_usuario'] = $user['id_usuario'];
                 $_SESSION['usuario_nombre'] = $user['nombre_usuario'];
                 
 
-                header("Location: /TP_N_3_PAGINA_WEB/TP N3 - Proyecto Web - [Juan-Patricio-Chiriff] y [Theo-Benjamin-Soiffer]/Crismorena-Grupo[1].php");
+                header("Location:TP-N3-Proyecto Web-[Chiriff-juanpatricio]-[Theo-soiffer].php");
                 exit;
             } else {
                 $message = "<p style='color:red;'>Usuario o contraseña incorrectos.</p>";

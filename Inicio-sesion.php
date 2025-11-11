@@ -8,7 +8,7 @@ include __DIR__ . '/src/php/Iniciar-sesion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="src/css/inicio.css">
 </head>
 <body>
 <form action="" method="post">
@@ -23,7 +23,7 @@ include __DIR__ . '/src/php/Iniciar-sesion.php';
     <button type="submit" name="boton-sesion">Iniciar sesión</button>
 
     <p>¿No tenés cuenta? <a href="Registro_usuario.php">Registrate aquí</a></p>
-    <p><a href="Crismorena-Grupo[1].php">Entrar sin iniciar sesión</a></p>
+    <p>¿No queres iniciar sesión?<a href="TP-N3-Proyecto Web-[Chiriff-juanpatricio]-[Theo-soiffer].php">Entrar sin iniciar sesión</a></p>
 </form>
 </body>
 </html>

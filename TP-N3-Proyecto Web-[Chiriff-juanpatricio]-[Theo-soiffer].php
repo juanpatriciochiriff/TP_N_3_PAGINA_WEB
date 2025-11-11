@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,15 +8,8 @@
   <link rel="stylesheet" href="src/css/index.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="contacto.php">Contacto</a></li>
-        <li><a href="#">Productos</a></li>
-      </ul>
-    </nav>
-  </header>
+  <?php include 'header.php'; ?>  
+
   <div class="titulo-principal-div">
     <h1 class="titulo-principal">La resistencia</h1>
   </div>
