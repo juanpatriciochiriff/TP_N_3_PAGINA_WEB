@@ -21,7 +21,7 @@
           No tenemos compra mínima y llevando más de 60.000$ hay 10% OFF.
         </p>
       </div>
-      <img src="img/local.jpg" alt="Local presencial">
+      <img src="src/img/local.png" alt="Local presencial">
     </div>
   </section>
 
