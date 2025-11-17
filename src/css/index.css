@@ -1,122 +1,166 @@
+/* ------------------------------- */
+/*  ESTILOS BASE DE LA PÁGINA     */
+/* ------------------------------- */
+
 body {
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #f8cce5;
-  color: #000;
+    margin: 0;
+    font-family: "Courier New", monospace;
+    background-color: #f9c8de;
+    color: black;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #d483a6;
-  width: 90%;
-  margin: 30px auto;
+/* Título principal */
+.titulo-principal-div {
+    text-align: center;
+    margin-top: 20px;
 }
-
 
 .titulo-principal {
-  background-color: #ff9edb;
-  color: black;
-  display: inline-block;
-  padding: 10px 40px;
-  margin: 30px auto;
-  font-size: 24px;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    background-color: var(--rosa-boton);
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 10px;
 }
 
-.estadisticas {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.estadisticas img {
-  width: 90%;
-  max-width: 900px;
-  border-radius: 5px;
-}
+/* --- Sección Cris Morena --- */
 
 .cris-morena {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 800px;
-}
-
-.cris-morena h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
 }
 
 .cris-morena p {
-  font-size: 14px;
-  text-align: justify;
-  padding: 0 20px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .imagenes-cris {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
 }
 
 .imagenes-cris img {
-  width: 180px;
-  border-radius: 5px;
+    width: 40%;
+    max-width: 250px;
+    border-radius: 10px;
 }
+
+/* --- Sección Margarita --- */
 
 .margarita {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 900px;
-}
-
-.margarita h2 {
-  font-size: 22px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .contenedor-margarita {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  
-  
-  margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
 }
-
-
-.contenedor-margarita h2,
-.contenedor-margarita > p {
-    flex-basis: 100%;
-}
-
 
 .contenedor-margarita img {
-  width: 300px;
-  border-radius: 8px;
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
 }
 
-.novelas p {
-  font-size: 14px;
+.novelas {
+    text-align: center;
+}
+
+.novelas img {
+    cursor: pointer;
 }
 
 .titulo-exitos {
-  font-weight: bold;
-  margin-top: 5px;
+    font-weight: bold;
 }
+
+/* --- Sección Shows --- */
 
 .shows {
-  text-align: center;
-  margin-top: 40px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 25px;
 }
 
-footer {
-  text-align: left;
-  font-size: 10px;
-  padding: 10px;
-  color: #000;
-  background-color: #f8cce5;
+
+/* ------------------------------- */
+/*            RESPONSIVE           */
+/* ------------------------------- */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 900px) {
+
+    .imagenes-cris {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagenes-cris img {
+        width: 70%;
+    }
+
+    .contenedor-margarita {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor-margarita div {
+        width: 100%;
+    }
+
+    .contenedor-margarita img {
+        width: 70%;
+        max-width: 300px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 600px) {
+
+    .titulo-principal {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .cris-morena p,
+    .margarita p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .imagenes-cris img {
+        width: 85%;
+    }
+
+    .contenedor-margarita img {
+        width: 85%;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 400px) {
+
+    .titulo-principal {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .imagenes-cris img,
+    .contenedor-margarita img {
+        width: 95%;
+    }
 }
