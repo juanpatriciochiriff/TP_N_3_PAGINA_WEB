@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Productos</title>
+<link rel="stylesheet" href="src/css/productos.css" />
+<script src="src/js/header-y-footer.js"></script>
+</head>
+<div id="header"></div>
+<script>
+fetch("header.php")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("header").innerHTML = data;
+    });
+</script>
+<body>
+    <h1 class="titulo">Productos</h1>
+
+<section class="subtitulo">
+    <h2>Mas vendidos !</h2>
+</section>
+
+<section class="productos-grid">
+    <div class="producto">
+        <img src="src/img/casi-angeles.png" alt="Libros de casi angeles" />
+        <div class="info">
+            <h3>Libros de casi angeles</h3>
+            
+            <div class="precio-estrellas">
+                <span class="estrellas">★★★★★</span>
+                <span class="precio">35.000$ c.u</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="src/img/disco-rebeldeway.png" alt="Disco erreway señales" />
+        <div class="info">
+            <h3>Disco erreway “señales”</h3>
+            <div class="precio-estrellas">
+                <span class="estrellas">★★★★★</span>
+                <span class="precio">10.000$ c.u</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="src/img/album-figuritas.png" alt="Album de figuritas Floricienta" />
+        <div class="info">
+            <h3>Album Floricienta</h3>
+            <div class="precio-estrellas">
+                <span class="estrellas">★★★★★</span>
+                <span class="precio">20.000$ c.u</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="producto">
+        <img src="src/img/video-casete.png" alt="Video-Cassette Chiquititas" />
+        <div class="info">
+            <h3>Video-Cassette Chiquititas</h3>
+            <div class="precio-estrellas">
+                <span class="estrellas">★★★★★</span>
+                <span class="precio">15.000$ c.u</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="subtitulo">
+    <h2>Descuentos de locos!</h2>
+</section>
+
+<section class="descuentos-grid">
+    <div class="descuento">
+        <img src="src/img/album-casi.png" alt="Album figuritas casi angeles" />
+        <p>
+            Album figuritas casi angeles<br />
+            <span class="precio-descuento">6000$</span><br />
+        
+        </p>
+    </div>
+    <div class="descuento">
+        <img src="src/img/disco-chiqui.png" alt="Disco chiquititas 1996" />
+        <p>
+            Disco chiquititas 1996<br />
+            <span class="precio-descuento">15.000$</span>
+        </p>
+    </div>
+    <div class="descuento">
+        <img src="src/img/collar.png" alt="Collar mar y thiago" />
+        <p>
+            Collar<br />
+            Casi angeles<br />
+            <span class="precio-descuento">3000$</span>
+        </p>
+    </div>
+</section>
+
+<h3 class="promo">TODO A 50% OFF!</h3>
+
+
+    
+</body>
+<div id="footer"></div>
+</html>
+
+
+

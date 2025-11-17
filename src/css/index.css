@@ -5,6 +5,12 @@ body {
   color: #000;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #d483a6;
+  width: 90%;
+  margin: 30px auto;
+}
 
 
 .titulo-principal {
@@ -76,9 +82,17 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  flex-wrap: wrap;
+  
+  
   margin-top: 20px;
 }
+
+
+.contenedor-margarita h2,
+.contenedor-margarita > p {
+    flex-basis: 100%;
+}
+
 
 .contenedor-margarita img {
   width: 300px;

@@ -1,0 +1,82 @@
+/* ======== ESTILO GENERAL ======== */
+
+body {
+    background-color: #f9c8de;
+    font-family: "Courier New", monospace;
+    color: black;
+    margin: 0;
+    
+}
+
+.titulo {
+     background-color: #ff9edb;
+  color: black;
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 30px auto;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* ======== CADA SECCIÓN ======== */
+
+.exito {
+    display: flex;
+    /* Centrar verticalmente la imagen con respecto al texto */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.exito img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+    /* Centrar la imagen dentro de su contenedor cuando sea necesario */
+    margin: 0 auto;
+}
+
+.texto {
+    max-width: 60%;
+}
+
+.texto h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.texto p {
+    line-height: 1.4;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .exito {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .exito img {
+        width: 70%;
+        margin: 0 auto;
+    }
+}

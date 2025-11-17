@@ -23,7 +23,7 @@ include __DIR__ . '/src/php/Iniciar-sesion.php';
     <button type="submit" name="boton-sesion">Iniciar sesión</button>
 
     <p>¿No tenés cuenta? <a href="Registro_usuario.php">Registrate aquí</a></p>
-    <p>¿No queres iniciar sesión?<a href="TP-N3-Proyecto Web-[Chiriff-juanpatricio]-[Theo-soiffer].php">Entrar sin iniciar sesión</a></p>
+    <p>¿No queres iniciar sesión?<a href="TP-N3-Proyecto Web-[Chiriff-juanpatricio]-[Theo-soiffer].html">Entrar sin iniciar sesión</a></p>
 </form>
 </body>
 </html>
