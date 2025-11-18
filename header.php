@@ -17,7 +17,7 @@ session_start();
 
       <div class="right-menu">
         <?php if (isset($_SESSION['id_usuario'])): ?>
-          <li><a href="/php/cerrar-sesion.php">Cerrar sesión</a></li>
+          <li><a href="src/php/cerrar-sesion.php">Cerrar sesión</a></li>
         <?php else: ?>
           <li><a href="Inicio-sesion.php">Iniciar sesión</a></li>
         <?php endif;?>

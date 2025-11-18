@@ -1,20 +1,29 @@
-/* ------------------------------- */
-/*  ESTILOS BASE DE LA PÁGINA     */
-/* ------------------------------- */
+/* ---------------------------------------------------- */
+/*                 ESTILOS BASE DE LA PÁGINA            */
+/* ---------------------------------------------------- */
 
 body {
     margin: 0;
     font-family: "Courier New", monospace;
-    background-color: #f9c8de;
+    background-color: #f9c8de;  /* Fondo rosado pastel suave */
     color: black;
 }
 
-/* Título principal */
+/* Línea separadora usada entre secciones */
+hr {
+  border: none;
+  border-top: 1px solid #d483a6;
+  width: 90%;
+  margin: 30px auto;
+}
+
+/* Título principal centrado */
 .titulo-principal-div {
     text-align: center;
     margin-top: 20px;
 }
 
+/* Caja del título */
 .titulo-principal {
     background-color: var(--rosa-boton);
     display: inline-block;
@@ -22,7 +31,10 @@ body {
     border-radius: 10px;
 }
 
-/* --- Sección Cris Morena --- */
+
+/* ---------------------------------------------------- */
+/*                 SECCIÓN: CRIS MORENA                 */
+/* ---------------------------------------------------- */
 
 .cris-morena {
     max-width: 900px;
@@ -31,11 +43,13 @@ body {
     padding: 20px;
 }
 
+/* Párrafos alineados a la izquierda en desktop */
 .cris-morena p {
     text-align: left;
     margin-bottom: 20px;
 }
 
+/* Galería de imágenes */
 .imagenes-cris {
     display: flex;
     justify-content: center;
@@ -43,13 +57,17 @@ body {
     margin-top: 20px;
 }
 
+/* Cada imagen */
 .imagenes-cris img {
     width: 40%;
     max-width: 250px;
     border-radius: 10px;
 }
 
-/* --- Sección Margarita --- */
+
+/* ---------------------------------------------------- */
+/*                  SECCIÓN: MARGARITA                  */
+/* ---------------------------------------------------- */
 
 .margarita {
     max-width: 900px;
@@ -58,6 +76,13 @@ body {
     text-align: center;
 }
 
+/* Enlaces dentro de esta sección */
+.margarita a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Contenedor con imágenes o bloques */
 .contenedor-margarita {
     display: flex;
     justify-content: space-between;
@@ -71,19 +96,23 @@ body {
     border-radius: 10px;
 }
 
+/* Bloque de novelas (centrado) */
 .novelas {
     text-align: center;
 }
 
 .novelas img {
-    cursor: pointer;
+    cursor: pointer;  /* Para indicar que es clickeable */
 }
 
 .titulo-exitos {
     font-weight: bold;
 }
 
-/* --- Sección Shows --- */
+
+/* ---------------------------------------------------- */
+/*                    SECCIÓN: SHOWS                    */
+/* ---------------------------------------------------- */
 
 .shows {
     max-width: 500px;
@@ -93,11 +122,11 @@ body {
 }
 
 
-/* ------------------------------- */
-/*            RESPONSIVE           */
-/* ------------------------------- */
+/* ---------------------------------------------------- */
+/*                       RESPONSIVE                     */
+/* ---------------------------------------------------- */
 
-/* Tablets (pantallas medianas) */
+/* ------------------ Tablets (pantallas medianas) ------------------ */
 @media (max-width: 900px) {
 
     .imagenes-cris {
@@ -125,7 +154,8 @@ body {
     }
 }
 
-/* Celulares grandes */
+
+/* ------------------ Celulares grandes ------------------ */
 @media (max-width: 600px) {
 
     .titulo-principal {
@@ -133,6 +163,7 @@ body {
         padding: 10px 20px;
     }
 
+    /* Párrafos centrados en pantallas chicas */
     .cris-morena p,
     .margarita p {
         text-align: center;
@@ -148,7 +179,8 @@ body {
     }
 }
 
-/* Celulares pequeños */
+
+/* ------------------ Celulares pequeños ------------------ */
 @media (max-width: 400px) {
 
     .titulo-principal {

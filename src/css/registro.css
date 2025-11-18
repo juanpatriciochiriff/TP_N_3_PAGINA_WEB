@@ -1,45 +1,66 @@
-/* --- COLORES BASE --- */
+/* ---------------------------------------------------- */
+/*                      COLORES BASE                    */
+/* ---------------------------------------------------- */
+
 :root {
-    --rosa-claro: #f7cbe7;
-    --rosa-fuerte: #e57ab2;
-    --rosa-boton: #f28ccd;
+    --rosa-claro: #f7cbe7;   /* Fondo general */
+    --rosa-fuerte: #e57ab2;  /* Hover del botón / links */
+    --rosa-boton: #f28ccd;   /* Botón principal */
     --negro: #000;
     --blanco: #fff;
-    --borde: #d48ebb;
+    --borde: #d48ebb;        /* Bordes del formulario */
 }
 
-/* --- ESTILOS GENERALES --- */
+
+/* ---------------------------------------------------- */
+/*                   ESTILOS GENERALES                  */
+/* ---------------------------------------------------- */
+
 body {
     background-color: var(--rosa-claro);
     font-family: "Courier New", monospace;
     margin: 0;
+
+    /* Centrado del contenido */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;           /* Ocupa toda la pantalla */
 }
 
-/* CONTENEDOR */
+
+/* ---------------------------------------------------- */
+/*                 CONTENEDOR PRINCIPAL                 */
+/* ---------------------------------------------------- */
+
 .container {
     background-color: var(--blanco);
     padding: 35px 40px;
     border-radius: 12px;
     border: 2px solid var(--borde);
-    width: 380px;
+
+    width: 380px;            /* Tamaño fijo del formulario */
 }
 
-/* FORMULARIO */
+
+/* ---------------------------------------------------- */
+/*                       FORMULARIO                     */
+/* ---------------------------------------------------- */
+
+/* Título del formulario */
 .formulario h2 {
     text-align: center;
     color: var(--negro);
     margin-bottom: 20px;
 }
 
+/* Etiquetas de texto encima de cada input */
 label {
     display: block;
     margin-top: 12px;
 }
 
+/* Inputs del formulario */
 input {
     width: 100%;
     padding: 10px;
@@ -48,7 +69,11 @@ input {
     border: 1px solid var(--borde);
 }
 
-/* BOTÓN */
+
+/* ---------------------------------------------------- */
+/*                          BOTÓN                       */
+/* ---------------------------------------------------- */
+
 #boton {
     width: 100%;
     padding: 12px;
@@ -59,14 +84,18 @@ input {
     font-weight: bold;
     color: var(--negro);
     margin-top: 20px;
-    transition: 0.2s;
+    transition: 0.2s;              /* Suavizado de hover */
 }
 
 #boton:hover {
     background-color: var(--rosa-fuerte);
 }
 
-/* LINKS */
+
+/* ---------------------------------------------------- */
+/*                         LINKS                        */
+/* ---------------------------------------------------- */
+
 p {
     text-align: center;
     margin-top: 15px;
@@ -82,8 +111,14 @@ a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+
+/* ---------------------------------------------------- */
+/*                       RESPONSIVE                     */
+/* ---------------------------------------------------- */
+
 @media (max-width: 420px) {
+
+    /* El formulario se ajusta al ancho de pantallas chicas */
     .container {
         width: 90%;
     }

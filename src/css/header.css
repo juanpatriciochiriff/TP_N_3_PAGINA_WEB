@@ -1,31 +1,41 @@
+/* ---------------------------------------------------- */
+/*                    VARIABLES GLOBALES                */
+/* ---------------------------------------------------- */
+
 :root {
-    --rosa-fuerte: #e57ab2;
-    --negro: #000;
+    --rosa-fuerte: #e57ab2;  /* Color principal del header */
+    --negro: #000;           /* Color de texto genérico */
 }
+
+
+/* ---------------------------------------------------- */
+/*                        HEADER                         */
+/* ---------------------------------------------------- */
 
 header {
     width: 100%;
     background-color: var(--rosa-fuerte);
-    padding: 15px 0;
+    padding: 15px 0;   /* Espacio vertical del header */
 }
+
+
+/* ---------------------------------------------------- */
+/*                NAVEGACIÓN (NAV / MENÚ)               */
+/* ---------------------------------------------------- */
 
 nav ul {
     margin: 0;
-    padding: 0 40px;
-    list-style: none;
+    padding: 0 40px;             /* Espaciado horizontal interno */
+    list-style: none;            /* Quita los puntos */
 
-    display: flex;
-
+    display: flex;               /* Menú horizontal */
     align-items: center;
 
     font-family: "Courier New", monospace;
 }
 
-.right-menu a{
-    border: 1px solid black;
-    padding: 4px;
-    border-radius: 40px;
-}
+
+/* ------------------- Secciones del menú ------------------- */
 
 .left-space,
 .center-menu,
@@ -35,23 +45,25 @@ nav ul {
 }
 
 
+/* Columna izquierda: sirve para empujar el centro */
 .left-space {
-    flex: 1; 
+    flex: 1;  
 }
 
-
+/* Columna central: ítems principales */
 .center-menu {
-    gap: 40px;
-    
+    gap: 40px;                   /* Espaciado entre enlaces */
     justify-content: center;
 }
 
-
+/* Columna derecha: botones o enlaces especiales */
 .right-menu {
-    flex: 1; 
-    justify-content: flex-end; 
+    flex: 1;
+    justify-content: flex-end;   /* Alineados a la derecha */
 }
 
+
+/* ------------------- Estilos de enlaces ------------------- */
 
 nav a {
     color: var(--negro);
@@ -63,21 +75,36 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.right-menu a:hover{
+/* Estilo especial para enlaces del lado derecho */
+.right-menu a {
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 40px;         /* Efecto de pastilla */
+}
+
+.right-menu a:hover {
     background-color: white;
     color: black;
-    transition: 0.4 ease-in-out;
+    transition: 0.4s ease-in-out;  /* Suavizado de transición */
     text-decoration: none;
 }
 
-/* RESPONSIVE */
+
+/* ---------------------------------------------------- */
+/*                        RESPONSIVE                     */
+/*               (Celulares y tablets pequeñas)          */
+/* ---------------------------------------------------- */
+
 @media (max-width: 700px) {
+
+    /* Menú pasa de horizontal a vertical */
     nav ul {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
     }
 
+    /* El orden se reorganiza para que el menú quede lógico */
     .center-menu {
         justify-content: center;
         order: 1;
