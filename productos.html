@@ -1,105 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Productos</title>
-<link rel="stylesheet" href="src/css/productos.css" />
-<script src="src/js/header-y-footer.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="src/css/productos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="src/js/header-y-footer.js"></script>
 </head>
-<div id="header"></div>
+
 <body>
+    <div id="header"></div>
+    
+    <div id="icono-carrito" onclick="toggleCarrito()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-carrito">0</span>
+    </div>
+
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="contenido-carrito">
+            <span class="cerrar-carrito" onclick="toggleCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito">
+                </ul>
+            <div class="total-carrito">
+                <h3>Total: <span id="total-precio">0</span>$</h3>
+            </div>
+            <button class="btn-pagar" onclick="alert('¡Gracias por tu compra!')">Finalizar Compra</button>
+        </div>
+    </div>
+
     <h1 class="titulo">Productos</h1>
 
-<section class="subtitulo">
-    <h2>Mas vendidos !</h2>
-</section>
+    <section class="subtitulo">
+        <h2>Mas vendidos !</h2>
+    </section>
 
-<section class="productos-grid">
-    <div class="producto">
-        <img src="src/img/casi-angeles.png" alt="Libros de casi angeles" />
-        <div class="info">
-            <h3>Libros de casi angeles</h3>
-            
-            <div class="precio-estrellas">
-                <span class="estrellas">★★★★★</span>
-                <span class="precio">35.000$ c.u</span>
+    <section class="productos-grid">
+        <div class="producto">
+            <img src="src/img/casi-angeles.png" alt="Libros de casi angeles" />
+            <div class="info">
+                <h3>Libros de casi angeles</h3>
+                <div class="precio-estrellas">
+                    <span class="estrellas">★★★★★</span>
+                    <span class="precio">35.000$ c.u</span>
+                </div>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Libros de casi angeles', 35000)">Comprar</button>
             </div>
         </div>
-    </div>
 
-    <div class="producto">
-        <img src="src/img/disco-rebeldeway.png" alt="Disco erreway señales" />
-        <div class="info">
-            <h3>Disco erreway “señales”</h3>
-            <div class="precio-estrellas">
-                <span class="estrellas">★★★★★</span>
-                <span class="precio">10.000$ c.u</span>
+        <div class="producto">
+            <img src="src/img/disco-rebeldeway.png" alt="Disco erreway señales" />
+            <div class="info">
+                <h3>Disco erreway “señales”</h3>
+                <div class="precio-estrellas">
+                    <span class="estrellas">★★★★★</span>
+                    <span class="precio">10.000$ c.u</span>
+                </div>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Disco erreway señales', 10000)">Comprar</button>
             </div>
         </div>
-    </div>
 
-    <div class="producto">
-        <img src="src/img/album-figuritas.png" alt="Album de figuritas Floricienta" />
-        <div class="info">
-            <h3>Album Floricienta</h3>
-            <div class="precio-estrellas">
-                <span class="estrellas">★★★★★</span>
-                <span class="precio">20.000$ c.u</span>
+        <div class="producto">
+            <img src="src/img/album-figuritas.png" alt="Album de figuritas Floricienta" />
+            <div class="info">
+                <h3>Album Floricienta</h3>
+                <div class="precio-estrellas">
+                    <span class="estrellas">★★★★★</span>
+                    <span class="precio">20.000$ c.u</span>
+                </div>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Album Floricienta', 20000)">Comprar</button>
             </div>
         </div>
-    </div>
 
-    <div class="producto">
-        <img src="src/img/video-casete.png" alt="Video-Cassette Chiquititas" />
-        <div class="info">
-            <h3>Video-Cassette Chiquititas</h3>
-            <div class="precio-estrellas">
-                <span class="estrellas">★★★★★</span>
-                <span class="precio">15.000$ c.u</span>
+        <div class="producto">
+            <img src="src/img/video-casete.png" alt="Video-Cassette Chiquititas" />
+            <div class="info">
+                <h3>Video-Cassette Chiquititas</h3>
+                <div class="precio-estrellas">
+                    <span class="estrellas">★★★★★</span>
+                    <span class="precio">15.000$ c.u</span>
+                </div>
+                <button class="btn-agregar" onclick="agregarAlCarrito('Video-Cassette Chiquititas', 15000)">Comprar</button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+    <section class="subtitulo">
+        <h2>Descuentos de locos!</h2>
+    </section>
 
-<section class="subtitulo">
-    <h2>Descuentos de locos!</h2>
-</section>
+    <section class="descuentos-grid">
+        <div class="descuento">
+            <img src="src/img/album-casi.png" alt="Album figuritas casi angeles" />
+            <p>
+                Album figuritas casi angeles<br />
+                <span class="precio-descuento">6000$</span><br />
+            </p>
+            <button class="btn-agregar btn-small" onclick="agregarAlCarrito('Album figuritas CA', 6000)">Comprar</button>
+        </div>
+        <div class="descuento">
+            <img src="src/img/disco-chiqui.png" alt="Disco chiquititas 1996" />
+            <p>
+                Disco chiquititas 1996<br />
+                <span class="precio-descuento">15.000$</span>
+            </p>
+             <button class="btn-agregar btn-small" onclick="agregarAlCarrito('Disco Chiquititas 96', 15000)">Comprar</button>
+        </div>
+        <div class="descuento">
+            <img src="src/img/collar.png" alt="Collar mar y thiago" />
+            <p>
+                Collar Casi angeles<br />
+                <span class="precio-descuento">3000$</span>
+            </p>
+             <button class="btn-agregar btn-small" onclick="agregarAlCarrito('Collar Casi Angeles', 3000)">Comprar</button>
+        </div>
+    </section>
 
-<section class="descuentos-grid">
-    <div class="descuento">
-        <img src="src/img/album-casi.png" alt="Album figuritas casi angeles" />
-        <p>
-            Album figuritas casi angeles<br />
-            <span class="precio-descuento">6000$</span><br />
-        
-        </p>
-    </div>
-    <div class="descuento">
-        <img src="src/img/disco-chiqui.png" alt="Disco chiquititas 1996" />
-        <p>
-            Disco chiquititas 1996<br />
-            <span class="precio-descuento">15.000$</span>
-        </p>
-    </div>
-    <div class="descuento">
-        <img src="src/img/collar.png" alt="Collar mar y thiago" />
-        <p>
-            Collar<br />
-            Casi angeles<br />
-            <span class="precio-descuento">3000$</span>
-        </p>
-    </div>
-</section>
+    <h3 class="promo">TODO A 50% OFF!</h3>
 
-<h3 class="promo">TODO A 50% OFF!</h3>
-
-
-    
+    <div id="footer"></div>
 </body>
-<div id="footer"></div>
 </html>
-
-
-
