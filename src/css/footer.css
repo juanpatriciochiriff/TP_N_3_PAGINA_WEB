@@ -4,12 +4,13 @@
 
 /* Contenedor general del footer */
 .footer {
-    background-color: #e58bbc;    /* Fondo rosa */
-    padding: 25px 0;              /* Espaciado vertical */
-    margin-top: 40px;             /* Separación del contenido anterior */
-    text-align: center;           /* Centrar todo el contenido */
-    font-family: "Courier New", monospace;
-    color: black;
+
+    background-color: #e58bbc;
+    padding: 25px 0;
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+
 }
 
 /* Título del footer (ej: "Seguinos") */

@@ -4,9 +4,10 @@
 
 body {
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #f8cce5; /* Fondo rosado pastel */
-  color: #000; /* Texto negro */
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f8cce5;
+  color: #000;
+
 }
 
 

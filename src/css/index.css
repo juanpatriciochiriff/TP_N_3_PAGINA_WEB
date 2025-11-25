@@ -4,9 +4,9 @@
 
 body {
     margin: 0;
-    font-family: "Courier New", monospace;
-    background-color: #f9c8de;  /* Fondo rosado pastel suave */
-    color: black;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #f9c8de;
+
 }
 
 /* Línea separadora usada entre secciones */
@@ -25,10 +25,15 @@ hr {
 
 /* Caja del título */
 .titulo-principal {
-    background-color: var(--rosa-boton);
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 10px;
+      background-color: #ff9edb;
+  color: black;
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 30px auto;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: center;
+  
 }
 
 
@@ -96,7 +101,14 @@ hr {
     border-radius: 10px;
 }
 
-/* Bloque de novelas (centrado) */
+
+hr {
+  border: none;
+  border-top: 1px solid #d483a6;
+  width: 90%;
+  margin: 30px auto;
+}
+
 .novelas {
     text-align: center;
 }

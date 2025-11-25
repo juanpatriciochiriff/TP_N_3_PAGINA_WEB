@@ -4,10 +4,10 @@
 
 body {
     margin: 0;
-    background-color: #f8cce5;               /* Fondo rosado pastel */
-    font-family: "Courier New", monospace;
-    color: black;
     text-align: center;
+    background-color: #f8cce5;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+
 }
 
 /* Título principal rosa */

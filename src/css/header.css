@@ -13,6 +13,7 @@
 /* ---------------------------------------------------- */
 
 header {
+    
     width: 100%;
     background-color: var(--rosa-fuerte);
     padding: 15px 0;   /* Espacio vertical del header */
@@ -31,7 +32,7 @@ nav ul {
     display: flex;               /* Menú horizontal */
     align-items: center;
 
-    font-family: "Courier New", monospace;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
 }
 
 
