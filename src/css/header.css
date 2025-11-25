@@ -4,6 +4,7 @@
 }
 
 header {
+    
     width: 100%;
     background-color: var(--rosa-fuerte);
     padding: 15px 0;
@@ -18,7 +19,7 @@ nav ul {
 
     align-items: center;
 
-    font-family: "Courier New", monospace;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .right-menu a{

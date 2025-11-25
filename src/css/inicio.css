@@ -11,7 +11,7 @@
 /* --- ESTILOS GENERALES --- */
 body {
     background-color: var(--rosa-claro);
-    font-family: "Courier New", monospace;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
