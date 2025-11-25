@@ -51,6 +51,7 @@ function traducir_plan($plan) {
   <title>Suscripción Fans Cris Morena</title>
   <link rel="stylesheet" href="src/css/suscripcion.css">
   <script src="src/js/header-y-footer.js"></script>
+  <link rel="icon" type="image/png" href="src/img/icono.png">
 </head>
 
 <body>

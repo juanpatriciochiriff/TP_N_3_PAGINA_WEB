@@ -8,6 +8,7 @@ include __DIR__ . '/src/php/Iniciar-sesion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <link rel="icon" type="image/png" href="src/img/icono.png">
     <link rel="stylesheet" href="src/css/inicio.css">
 </head>
 <body>

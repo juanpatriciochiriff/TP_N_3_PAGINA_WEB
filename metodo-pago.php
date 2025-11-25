@@ -41,6 +41,7 @@ $plan = $_GET["plan"] ?? "mensual";
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finalizar Compra</title>
   <link rel="stylesheet" href="src/css/metodo-pago.css">
+  <link rel="icon" type="image/png" href="src/img/icono.png">
 </head>
 
 <body>

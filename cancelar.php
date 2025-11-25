@@ -51,7 +51,8 @@ if (isset($_GET["action"]) && $_GET["action"] === "confirmar_cancelacion") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancelar Suscripción</title>
-    <link rel="stylesheet" href="src/css/metodo-pago.css"> 
+    <link rel="stylesheet" href="src/css/metodo-pago.css">
+    <link rel="icon" type="image/png" href="src/img/icono.png"> 
 </head>
 
 <body>

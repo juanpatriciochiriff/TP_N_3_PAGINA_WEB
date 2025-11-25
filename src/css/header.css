@@ -13,10 +13,16 @@
 /* ---------------------------------------------------- */
 
 header {
-    
     width: 100%;
     background-color: var(--rosa-fuerte);
-    padding: 15px 0;   /* Espacio vertical del header */
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;    /* necesario para posicion absolute dentro */
+    min-height: 60px;      /* garantiza espacio para la hamburguesa */
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 
@@ -74,7 +80,10 @@ nav a {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    border-bottom: 2px solid black;
+    
+    transition: 0.1s ease-in-out
+    
 }
 
 /* Estilo especial para enlaces del lado derecho */
@@ -92,27 +101,117 @@ nav a:hover {
 }
 
 
-/* ---------------------------------------------------- */
-/*                        RESPONSIVE                     */
-/*               (Celulares y tablets pequeñas)          */
-/* ---------------------------------------------------- */
+/* ---------------------------------------------- */
+/*                 ICONO HAMBURGUESA              */
+/* ---------------------------------------------- */
+
+.hamburger {
+    display: none;               /* solo en desktop oculto, en mobile se muestra */
+    position: absolute;
+    top: 50%;
+    right: 18px;                 /* separación desde el borde derecho */
+    transform: translateY(-50%); /* centra verticalmente */
+    z-index: 2000;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 6px;
+}
+
+
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: black;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    border-radius: 2px;
+}
+
+/* Ocultar checkbox */
+#menu-toggle {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------------------------------------------- */
+/*               RESPONSIVE (700PX)               */
+/* ---------------------------------------------- */
 
 @media (max-width: 700px) {
 
-    /* Menú pasa de horizontal a vertical */
+    .hamburger {
+        display: flex;
+    }
+
+    /* menú oculto por defecto */
     nav ul {
         flex-direction: column;
-        gap: 10px;
-        padding: 10px;
+        position: absolute;
+        top: 100%;           /* justo debajo del header */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: var(--rosa-fuerte);
+        padding: 12px 0;
+        display: none;
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        box-sizing: border-box;
     }
 
-    /* El orden se reorganiza para que el menú quede lógico */
-    .center-menu {
-        justify-content: center;
-        order: 1;
+    /* mostrar menú cuando checkbox está checked */
+    #menu-toggle:checked ~ nav ul {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
+    /* animación del icono (rotar + desaparecer barra del centro) */
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(4px, 4px);
+    }
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+    }
+
+    /* ajustes del layout interno del menú en mobile */
+    .left-space {
+        display: none;
+    }
+
+    .center-menu,
     .right-menu {
-        order: 2;
+        width: 100%;
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-menu a {
+        border-radius: 0 !important;
+        border: none;
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
     }
 }
+

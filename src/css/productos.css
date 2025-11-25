@@ -20,6 +20,9 @@ body {
     letter-spacing: 2px;
     margin-bottom: 20px;
     border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Subtítulo debajo del título principal */
@@ -188,6 +191,14 @@ footer {
 /* ---------------------------------------------------- */
 
 @media (max-width: 768px) {
+
+    .titulo{
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
 
     /* Productos → una sola columna */
     .productos-grid {

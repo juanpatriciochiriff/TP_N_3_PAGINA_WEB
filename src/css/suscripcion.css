@@ -211,3 +211,41 @@ body {
         transform: scale(1);
     }
 }
+
+@media (max-width: 600px) {
+
+    .suscrito-info {
+        padding: 0 15px;            /* Respira en pantallas chicas */
+        text-align: center;
+    }
+
+    .suscrito-info .descripcion {
+        font-size: 1rem;            /* Texto más cómodo */
+        margin-bottom: 20px !important;
+        padding: 0 10px;
+    }
+
+    .plan-activo {
+        max-width: 80%;            /* Ahora ocupa todo el ancho */
+        padding: 25px 20px;         /* Reduce padding */
+        border-radius: 20px;
+    }
+
+    .plan-activo h3 {
+        font-size: 1.2rem;
+    }
+
+    .plan-activo .precio {
+        font-size: 1.4rem !important;
+    }
+
+    .btn-cancelar {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        border-radius: 40px;
+    }
+
+    .plan-activo p {
+        font-size: 0.9rem;
+    }
+}
