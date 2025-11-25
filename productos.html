@@ -8,13 +8,6 @@
 <script src="src/js/header-y-footer.js"></script>
 </head>
 <div id="header"></div>
-<script>
-fetch("header.php")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("header").innerHTML = data;
-    });
-</script>
 <body>
     <h1 class="titulo">Productos</h1>
 

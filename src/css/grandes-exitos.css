@@ -1,27 +1,32 @@
-/* ======== ESTILO GENERAL ======== */
+/* ---------------------------------------------------- */
+/*                 ESTILO GENERAL DE LA PÁGINA          */
+/* ---------------------------------------------------- */
 
 body {
+
     background-color: #f9c8de;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
-    color: black;
-    margin: 0;
-    
+
 }
 
+/* Título principal centrado manualmente */
 .titulo {
-     background-color: #ff9edb;
-  color: black;
-  display: inline-block;
-  padding: 10px 40px;
-  margin: 30px auto;
-  font-size: 24px;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    background-color: #ff9edb;
+    color: black;
+    display: inline-block;
+    padding: 10px 40px;
+    margin: 30px auto;
+    font-size: 24px;
+    border-radius: 8px;
+    text-align: center;
+
+    /* Centrado horizontal por transform */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
+/* Texto introductorio centrado */
 .intro {
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -29,54 +34,67 @@ body {
     line-height: 1.4;
 }
 
-/* ======== CADA SECCIÓN ======== */
+
+/* ---------------------------------------------------- */
+/*                   CADA SECCIÓN "ÉXITO"               */
+/* ---------------------------------------------------- */
 
 .exito {
-    display: flex;
-    /* Centrar verticalmente la imagen con respecto al texto */
-    align-items: center;
+    display: flex;                     /* Imagen + texto lado a lado */
+    align-items: center;               /* Centra verticalmente */
     justify-content: space-between;
     gap: 20px;
+
     max-width: 900px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 50px auto;          /* Centrada + margen inferior */
 }
 
+/* Imagen dentro de cada bloque */
 .exito img {
     width: 190px;
     height: 190px;
-    object-fit: cover;
+    object-fit: cover;                 /* Mantiene proporción recortando */
     border-radius: 5px;
     display: block;
-    /* Centrar la imagen dentro de su contenedor cuando sea necesario */
     margin: 0 auto;
 }
 
+/* Contenedor del texto */
 .texto {
-    max-width: 60%;
+    max-width: 60%;                    /* Texto no ocupa todo el ancho */
 }
 
+/* Títulos dentro de texto */
 .texto h2 {
     margin-top: 0;
     font-size: 1.3rem;
 }
 
+/* Párrafos */
 .texto p {
     line-height: 1.4;
 }
 
-/* ======== RESPONSIVE ======== */
+
+/* ---------------------------------------------------- */
+/*                         RESPONSIVE                   */
+/*               (Tablets y celulares medianos)         */
+/* ---------------------------------------------------- */
+
 @media (max-width: 768px) {
+
+    /* Imagen debajo y texto arriba, centrados */
     .exito {
         flex-direction: column-reverse;
         text-align: center;
     }
 
     .texto {
-        max-width: 100%;
+        max-width: 100%;               /* Texto ocupa todo el ancho */
     }
 
     .exito img {
-        width: 70%;
+        width: 70%;                    /* Imagen más grande para móviles */
         margin: 0 auto;
     }
 }

@@ -1,24 +1,33 @@
-/* --- COLORES BASE --- */
+/* ---------------------------------------------------- */
+/*                       COLORES BASE                   */
+/* ---------------------------------------------------- */
+
 :root {
-    --rosa-claro: #f7cbe7;
-    --rosa-fuerte: #e57ab2;
-    --rosa-boton: #f28ccd;
+    --rosa-claro: #f7cbe7;   /* Fondo general */
+    --rosa-fuerte: #e57ab2;  /* Hover del botón / acentos */
+    --rosa-boton: #f28ccd;   /* Color del botón principal */
     --negro: #000;
     --blanco: #fff;
-    --borde: #d48ebb;
+    --borde: #d48ebb;        /* Bordes suaves */
 }
 
-/* --- ESTILOS GENERALES --- */
+
+/* ---------------------------------------------------- */
+/*                   ESTILOS GENERALES                  */
+/* ---------------------------------------------------- */
+
+/* Centrado de todo el formulario en pantalla */
 body {
     background-color: var(--rosa-claro);
     font-family: 'Segoe UI', 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh;          /* Altura total visible */
     margin: 0;
 }
 
+/* Caja del formulario */
 form {
     background-color: var(--blanco);
     padding: 30px 40px;
@@ -28,27 +37,36 @@ form {
     text-align: center;
 }
 
+/* Título del formulario */
 h2 {
     margin-bottom: 20px;
     color: var(--negro);
 }
 
-/* --- CAMPOS --- */
+
+/* ---------------------------------------------------- */
+/*                        CAMPOS                         */
+/* ---------------------------------------------------- */
+
 label {
-    display: block;
+    display: block;        /* Cada label ocupa su línea */
     text-align: left;
     margin-top: 10px;
 }
 
 input {
-    width: 100%;
+    width: 100%;           /* Campos del mismo ancho */
     padding: 10px;
     margin-top: 6px;
     border: 1px solid var(--borde);
     border-radius: 6px;
 }
 
-/* --- BOTÓN --- */
+
+/* ---------------------------------------------------- */
+/*                        BOTÓN                          */
+/* ---------------------------------------------------- */
+
 button {
     margin-top: 20px;
     width: 100%;
@@ -63,10 +81,14 @@ button {
 }
 
 button:hover {
-    background-color: var(--rosa-fuerte);
+    background-color: var(--rosa-fuerte);  /* Cambio al pasar el cursor */
 }
 
-/* --- LINKS --- */
+
+/* ---------------------------------------------------- */
+/*                        LINKS                          */
+/* ---------------------------------------------------- */
+
 p {
     margin-top: 15px;
 }
@@ -81,9 +103,14 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- RESPONSIVE --- */
+
+/* ---------------------------------------------------- */
+/*                       RESPONSIVE                     */
+/* ---------------------------------------------------- */
+
+/* Pantallas muy pequeñas */
 @media (max-width: 400px) {
     form {
-        width: 80%;
+        width: 80%;          /* El formulario se achica proporcionalmente */
     }
 }

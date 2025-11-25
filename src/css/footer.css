@@ -1,45 +1,61 @@
-/* ======== FOOTER ======== */
+/* ---------------------------------------------------- */
+/*                        FOOTER                        */
+/* ---------------------------------------------------- */
 
+/* Contenedor general del footer */
 .footer {
+
     background-color: #e58bbc;
     padding: 25px 0;
     margin-top: 40px;
     text-align: center;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
-    color: black;
+
 }
 
+/* Título del footer (ej: "Seguinos") */
 .footer-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Contenedor de los enlaces a redes sociales */
 .footer-redes {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: center;   /* Centra los íconos/links */
+    gap: 30px;                 /* Espacio entre cada red */
     margin-bottom: 10px;
 }
 
+/* Estilos de los links a redes */
 .footer-redes a {
-    text-decoration: none;
+    text-decoration: none;     /* Quita subrayado */
     color: black;
     font-size: 1rem;
 }
 
+/* Hover para los links */
 .footer-redes a:hover {
     text-decoration: underline;
 }
 
+/* Texto de copyright */
 .footer-copy {
     margin-top: 10px;
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.8;              /* Lo hace un poco más suave */
 }
 
-/* Responsive */
+
+/* ---------------------------------------------------- */
+/*                        RESPONSIVE                    */
+/* ---------------------------------------------------- */
+
+/* Para pantallas pequeñas (celulares) */
 @media (max-width: 600px) {
+
+    /* Redes apiladas una debajo de la otra */
     .footer-redes {
         flex-direction: column;
         gap: 10px;

@@ -59,7 +59,7 @@ $plan = $_GET["plan"] ?? "mensual";
         <script>
             // Redirige después de 3 segundos
             setTimeout(() => {
-                window.location.href = 'Index.php';
+                window.location.href = 'Index.html';
             }, 3000);
         </script>
         <?php endif; ?>

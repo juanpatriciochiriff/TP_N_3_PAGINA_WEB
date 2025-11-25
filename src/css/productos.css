@@ -1,41 +1,51 @@
+/* ---------------------------------------------------- */
+/*                 ESTILOS GENERALES DE LA PÁGINA       */
+/* ---------------------------------------------------- */
+
 body {
     margin: 0;
+
     background-color: #f8cce5;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
-    color: black;
-    
-    text-align: center;
+
 }
 
+/* Título principal rosa */
 .titulo {
     background-color: #f399d8;
     color: black;
     padding: 10px 40px;
     font-size: 1.4rem;
-    
     display: inline-block;
     letter-spacing: 2px;
     margin-bottom: 20px;
     border-radius: 8px;
 }
 
+/* Subtítulo debajo del título principal */
 .subtitulo h2 {
-    
     font-size: 22px;
     margin-bottom: 30px;
 }
 
-/* ========== PRODUCTOS ========== */
+
+/* ---------------------------------------------------- */
+/*                     SECCIÓN: PRODUCTOS               */
+/* ---------------------------------------------------- */
 
 .productos-grid {
     max-width: 900px;
     margin: 0 auto 40px auto;
+
+    /* Grid en dos columnas */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0; /* No espacio para que las líneas se toquen */
-    border-bottom: 2px solid #e5b0d2; /* Línea inferior completa */
+
+    gap: 0;                      /* Sin espacio → permite líneas continuas */
+    border-bottom: 2px solid #e5b0d2;
 }
 
+/* Cada producto dentro de la grilla */
 .producto {
     display: flex;
     gap: 20px;
@@ -46,16 +56,17 @@ body {
     position: relative;
 }
 
-/* Línea vertical entre columnas, excepto última columna */
+/* Línea vertical separando columnas (solo en la columna izquierda) */
 .producto:nth-child(odd) {
     border-right: 2px solid #e5b0d2;
 }
 
-/* Línea horizontal entre filas: se aplicará a los dos primeros productos */
+/* Línea horizontal separando las filas */
 .producto:nth-child(-n + 2) {
     border-bottom: 2px solid #e5b0d2;
 }
 
+/* Imagen del producto */
 .producto img {
     width: 110px;
     height: 110px;
@@ -64,6 +75,7 @@ body {
     flex-shrink: 0;
 }
 
+/* Información del producto */
 .info {
     flex-grow: 1;
 }
@@ -79,28 +91,34 @@ body {
     font-size: 0.9rem;
 }
 
+/* Estrellas + precio */
 .precio-estrellas {
     font-size: 1rem;
     color: black;
 }
 
+/* Estrellas doradas */
 .estrellas {
     color: gold;
     margin-right: 8px;
     font-size: 1.2rem;
 }
 
+/* Precio en rojo */
 .precio {
     color: red;
     font-weight: bold;
 }
 
 
-/* ========== DESCUENTOS ========== */
+/* ---------------------------------------------------- */
+/*                    SECCIÓN: DESCUENTOS               */
+/* ---------------------------------------------------- */
 
 .descuentos-grid {
     max-width: 900px;
     margin: 0 auto 40px auto;
+
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -108,13 +126,15 @@ body {
     flex-wrap: nowrap;
 }
 
+/* Caja de cada descuento */
 .descuento {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 140px; /* ancho fijo */
+    width: 140px;        /* Ancho fijo para la alineación */
 }
 
+/* Imagen del producto en descuento */
 .descuento img {
     width: 90px;
     height: 90px;
@@ -123,16 +143,17 @@ body {
     margin-bottom: 12px;
 }
 
-/* Para que el texto quede a la misma altura (alineado abajo) */
+/* Texto del nombre del producto (alineado) */
 .descuento p {
-    flex-grow: 1;
+    flex-grow: 1;        /* Ocupa espacio para alinear textos verticalmente */
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.2;
-    min-height: 65px; /* altura fija para todos */
+    min-height: 65px;    /* Mantiene altura uniforme */
     color: black;
 }
 
+/* Precio con descuento */
 .precio-descuento {
     color: red;
     font-weight: bold;
@@ -141,6 +162,7 @@ body {
     margin-top: 4px;
 }
 
+/* Texto de promo grande */
 .promo {
     color: red;
     font-weight: bold;
@@ -148,7 +170,10 @@ body {
     margin-top: 30px;
 }
 
-/* ========== FOOTER ========== */
+
+/* ---------------------------------------------------- */
+/*                         FOOTER                       */
+/* ---------------------------------------------------- */
 
 footer {
     font-weight: bold;
@@ -157,14 +182,21 @@ footer {
     margin-top: 25px;
 }
 
-/* Responsive */
+
+/* ---------------------------------------------------- */
+/*                        RESPONSIVE                    */
+/* ---------------------------------------------------- */
+
 @media (max-width: 768px) {
+
+    /* Productos → una sola columna */
     .productos-grid {
         grid-template-columns: 1fr;
         border-left: none;
         border-top: none;
     }
 
+    /* Cada tarjeta de producto se convierte en un bloque con borde */
     .producto {
         flex-direction: row;
         border: 2px solid #e5b0d2;
@@ -172,15 +204,18 @@ footer {
         border-bottom: none;
         margin-bottom: 15px;
     }
+
     .producto:nth-child(2n) {
         border-right: none;
     }
 
+    /* Descuentos → en columna */
     .descuentos-grid {
         flex-direction: column;
         gap: 15px;
     }
 
+    /* Ajuste de ancho */
     .descuento {
         width: 90%;
         margin: 0 auto;
