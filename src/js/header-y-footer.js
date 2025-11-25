@@ -15,7 +15,7 @@ fetch("header.php")
 let carrito = [];
 
 function agregarAlCarrito(nombre, precio) {
-    // Agregar objeto al array
+   
     carrito.push({ nombre: nombre, precio: precio });
     actualizarCarrito();
 }
@@ -38,7 +38,7 @@ function actualizarCarrito() {
     });
     // Actualizar textos
     contador.innerText = carrito.length;
-     otalSpan.innerText = total.toLocaleString(); // Formato con puntos
+     totalSpan.innerText = total.toLocaleString(); // Formato con puntos
 }
 
 function eliminarItem(index) {
@@ -53,4 +53,11 @@ function toggleCarrito() {
     } else {
        modal.style.display = 'block';
     }
+}
+
+
+function finalizarCompra() {
+    const total = carrito.reduce((sum, item) => sum + item.precio, 0);
+
+    window.location.href = "metodo-pago.php?total=" + total;
 }

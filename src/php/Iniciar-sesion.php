@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['usuario_nombre'] = $user['nombre_usuario'];
                 
 
-                header("Location:TP-N3-Proyecto Web-[Chiriff-juanpatricio]-[Theo-soiffer].html");
+                header("Location:Index.html");
                 exit;
             } else {
                 $message = "<p style='color:red;'>Usuario o contraseña incorrectos.</p>";

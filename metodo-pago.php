@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+
+
 if (!isset($_SESSION['id_usuario'])) {
     header("Location: Inicio-sesion.php");
     exit;
@@ -10,7 +12,7 @@ include __DIR__ . "/src/db/conexion.php";
 
 $mensaje_exito = "";
 $redirigir = false;
-
+$total_compra = $_GET["total"] ?? null;
 
 if (isset($_GET["confirmar"]) && isset($_GET["plan"])) {
 
@@ -69,12 +71,14 @@ $plan = $_GET["plan"] ?? "mensual";
             <h1 class="titulo-principal">Método de Pago</h1>
 
             <div class="plan-elegido">
-                <?php if ($plan === "anual"): ?>
-                    💎 Plan Anual <strong>$70.000</strong>
-                <?php else: ?>
-                    📅 Plan Mensual <strong>$6.500</strong>
-                <?php endif; ?>
-            </div>
+    <?php if ($total_compra): ?>
+        🛒 Total de tu compra: <strong>$<?= number_format($total_compra, 0, ',', '.') ?></strong>
+    <?php elseif ($plan === "anual"): ?>
+        💎 Plan Anual <strong>$70.000</strong>
+    <?php else: ?>
+        📅 Plan Mensual <strong>$6.500</strong>
+    <?php endif; ?>
+</div>
 
             <p style="margin-bottom: 20px; color: #777;">Seleccioná cómo querés abonar:</p>
 

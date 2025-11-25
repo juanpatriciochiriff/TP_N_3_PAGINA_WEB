@@ -3,14 +3,16 @@
 /* ---------------------------------------------------- */
 
 /* Contenedor general del footer */
-.footer {
 
+.footer {
+    width: 100%;
     background-color: #e58bbc;
-    padding: 25px 0;
-    margin-top: 40px;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
     text-align: center;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
-
 }
 
 /* Título del footer (ej: "Seguinos") */
