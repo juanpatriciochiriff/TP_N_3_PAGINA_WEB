@@ -1,3 +1,8 @@
+/* 1. REGLA DE ORO: Esto evita que el padding agrande los elementos más allá del 100% */
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --rosa-fondo: #f9c8de;
     --rosa-boton: #e58bbc;
@@ -9,28 +14,35 @@
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', 'Roboto', sans-serif;
     background-color: var(--rosa-fondo);
     background-image: linear-gradient(180deg, var(--rosa-fondo) 0%, #ffeef5 100%);
+    background-attachment: fixed; /* Mantiene el fondo fijo y uniforme */
     color: var(--texto);
     min-height: 100vh;
+    overflow-x: hidden; /* Evita que la página baile hacia los lados */
 }
 
+/* Ajuste del título para que no empuje el ancho en celulares */
 .titulo-principal {
     background-color: #ff9edb;
     color: black;
     text-align: center;
     font-size: 2.5rem;
     border-radius: 8px;
-    width: fit-content;
+    width: auto;         /* Antes era fit-content, que puede romper el ancho */
+    max-width: 90%;      /* Asegura que nunca sea más ancho que la pantalla */
     display: block;
-    margin: 40px auto 10px auto; /* Centrado correcto */
+    margin: 40px auto 20px auto;
+    padding: 10px 20px;  /* Un poco de aire interno */
 }
 
 .suscripcion {
+    width: 100%;        /* Asegura que ocupe el ancho disponible */
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 20px;      /* Gracias al box-sizing del inicio, esto ya no rompe el ancho */
     text-align: center;
 }
 
@@ -42,28 +54,30 @@ body {
 
 .descripcion {
     max-width: 600px;
+    width: 90%; /* Asegura margen en móviles */
     margin: 0 auto 50px auto;
     line-height: 1.6;
     color: #444;
     font-size: 1.1rem;
 }
 
-/* Contenedor de tarjetas */
+/* --- CONTENEDOR DE TARJETAS --- */
 .planes {
     display: flex;
+    flex-direction: row; /* En PC uno al lado del otro */
     justify-content: center;
-    gap: 30px;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
+    gap: 30px;
+    width: 100%;
+    padding: 10px; /* Reduje el padding para evitar desbordes */
 }
 
 /* Diseño base de la tarjeta */
 .plan {
     background: var(--blanco);
     padding: 40px 30px;
-    width: 100%;
-    max-width: 300px;
+    width: 100%; /* Intenta ocupar espacio */
+    max-width: 300px; /* Pero se detiene en 300px */
     border-radius: 25px;
     box-shadow: var(--sombra-suave);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -93,18 +107,18 @@ body {
     color: #333;
 }
 
-/* Estilos específicos para el destacado */
+/* PLAN DESTACADO */
 .plan.destacado {
     border: 3px solid var(--rosa-boton);
-    transform: scale(1.05);
     z-index: 2;
+    /* En PC puede ser un poquito más grande si quieres, o dejarlo igual */
+    transform: scale(1.05); 
 }
 
 .plan.destacado:hover {
     transform: scale(1.05) translateY(-10px);
 }
 
-/* Etiqueta de "Recomendado" */
 .etiqueta-destacado {
     background-color: var(--rosa-oscuro);
     color: white;
@@ -119,9 +133,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
 }
 
-/* Listas de beneficios */
 .plan ul {
     list-style: none;
     padding: 0;
@@ -137,7 +151,6 @@ body {
     color: #666;
 }
 
-/* Icono de check rosa antes de cada item */
 .plan ul li::before {
     content: '💖';
     position: absolute;
@@ -146,7 +159,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Botón de COMPRAR */
 .btn-comprar {
     display: block;
     background-color: var(--rosa-boton);
@@ -169,14 +181,15 @@ body {
     transform: scale(1.02);
 }
 
-/* NUEVOS ESTILOS PARA USUARIO YA SUSCRITO */
+/* --- SECCIÓN USUARIO SUSCRITO (NO TOCADA EN ESTRUCTURA) --- */
 .suscrito-info {
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .plan-activo {
-    border: 3px solid #2ecc71; /* Borde verde para indicar activo */
+    border: 3px solid #2ecc71;
     box-shadow: 0 10px 25px rgba(46, 204, 113, 0.3);
     max-width: 450px;
     margin: 30px auto;
@@ -184,7 +197,7 @@ body {
 
 .btn-cancelar {
     display: block;
-    background-color: #ff9edb; /* Color naranja para la acción de administrar */
+    background-color: #ff9edb;
     color: white;
     padding: 15px 20px;
     border-radius: 50px;
@@ -198,36 +211,50 @@ body {
     background-color: #e67e22;
 }
 
-/* RESPONSIVE */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .titulo-principal { font-size: 1.8rem; }
-    
-    .planes {
-        flex-direction: column;
-        gap: 50px;
+    /* Ajuste del tamaño del título para que no sea gigante */
+    .titulo-principal { 
+        font-size: 1.8rem; 
+        width: 90%; 
+        max-width: 300px; /* Controla que no estire la pagina */
     }
     
+    .planes {
+        flex-direction: column; /* Uno abajo del otro */
+        gap: 50px;
+        padding: 0; /* Quitamos padding lateral para ganar espacio */
+    }
+    
+    /* Importante: Reseteamos la escala del destacado en móvil para que no se salga de la pantalla */
     .plan.destacado {
-        transform: scale(1);
+        transform: none; 
+        margin-top: 10px; /* Un poco de aire extra si hace falta */
+    }
+
+    .plan.destacado:hover {
+        transform: translateY(-5px);
     }
 }
 
 @media (max-width: 600px) {
+    .suscripcion {
+        padding: 10px; /* Menos padding en contenedor principal */
+    }
 
     .suscrito-info {
-        padding: 0 15px;            /* Respira en pantallas chicas */
-        text-align: center;
+        padding: 0;
     }
 
     .suscrito-info .descripcion {
-        font-size: 1rem;            /* Texto más cómodo */
+        font-size: 1rem;
         margin-bottom: 20px !important;
         padding: 0 10px;
     }
 
     .plan-activo {
-        max-width: 80%;            /* Ahora ocupa todo el ancho */
-        padding: 25px 20px;         /* Reduce padding */
+        max-width: 100%; /* Aprovecha todo el ancho disponible */
+        padding: 25px 15px;
         border-radius: 20px;
     }
 
@@ -242,10 +269,5 @@ body {
     .btn-cancelar {
         font-size: 0.9rem;
         padding: 12px 15px;
-        border-radius: 40px;
-    }
-
-    .plan-activo p {
-        font-size: 0.9rem;
     }
 }
